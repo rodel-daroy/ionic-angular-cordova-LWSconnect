@@ -1,0 +1,78 @@
+<!--
+  Generated template for the DashboardusrPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header >       
+  <ion-navbar >      
+    <ion-buttons left menuToggle="left" style="display: block !important;" >
+        <button ion-button icon-only>
+                    <img class="img-menu" src="assets/imgs/newimg/menu.png"> 
+        </button>
+      </ion-buttons>
+    <ion-title text-center>DASHBOARD</ion-title> 
+<ion-buttons end> 
+        <button ion-button icon-only (click)="NotifyBtn()">       
+          <img  class="img-notify" src="assets/imgs/newimg/notification.png" *ngIf="NotifyStatus == 0">         
+          <img  class="img-notify" src="assets/imgs/newimg/notification1.png" *ngIf="NotifyStatus != 0"> 
+        </button>
+</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>   
+    <!-- <div id="chart-container"></div>   -->
+  <ion-grid class="gridcl"> 
+
+      <ion-row no-margin no-padding class="rows-buttomm">  
+          <ion-col col-7 no-margin no-padding>      
+           </ion-col>       
+          <ion-col col-5 no-margin no-padding>      
+             <button ion-button outline (click)="CreateBtn()" style="border-radius: 8px;">CREATE A TASK</button>       
+          </ion-col>    
+      </ion-row>  
+
+      <div class="baldiv">{{ TotalHours }} hours logged</div> 
+
+     <canvas #doughnutCanvas class="chartCl" chart-labels="labels" (click)="itempending()"> </canvas>    
+     <div class="totaldiv">{{ BalanceHours }} hours left</div>         
+<!-- <div class="timeleft">30 hours</div>  -->
+<!-- <ion-row no-margin no-padding class="rows-hours">
+    <ion-col no-margin no-padding col-6 >    
+      <div class="div-bglog"></div> <p no-margin no-padding class="p-hourlog">25 hours logged</p> 
+    </ion-col>
+    <ion-col no-margin no-padding col-6 > 
+        <div class="div-bgleft"></div> <p no-margin no-padding class="p-hourleft">5 hours left</p>
+    </ion-col>
+</ion-row> -->
+
+<!-- <ion-row no-margin no-padding class="rows-plans">
+    <ion-col no-margin no-padding col-12 text-center >      
+       <p no-margin no-padding class="p-plans">Current plan expires in 30 days</p>   
+    </ion-col>
+</ion-row> -->
+
+      <ion-row no-margin no-padding class="rows-btnlog">     
+          <ion-col col-12 no-margin no-padding text-center>         
+             <!-- <button ion-button full class="btn-fullbg" (click)="AdditionalBtn()">
+               BUY ADDITIONAL HOURS  
+              </button>    -->    
+              <button ion-button no-margin no-padding class="btn-img" (click)="itempending()" >
+                  <img src="assets/imgs/newimg/group652.png" >  
+              </button>  
+          </ion-col>
+      </ion-row>   
+ 
+      <ion-row no-margin no-padding class="rows-buttomm">       
+          <ion-col col-7 no-margin no-padding>  
+            <p no-margin no-padding class="p-plans">Current plan expires in {{ BalanceHours }} hours</p>
+           </ion-col>       
+          <ion-col col-5 no-margin no-padding>       
+             <button ion-button outline (click)="UpgradeBtn()" class="btnOptions">OPTIONS</button>       
+          </ion-col>
+      </ion-row>    
+
+  </ion-grid>
+</ion-content>

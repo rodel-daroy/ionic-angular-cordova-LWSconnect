@@ -1,0 +1,211 @@
+page-signin {
+
+    ion-title {  
+        color: #191A45;
+    }
+
+    .toprows { 
+        margin-bottom: 16px; 
+        margin-top: 47px;
+    }
+
+    .toolbar-background-md {
+        border-color: #ffffff;
+        background: #ffffff;
+    }
+
+    .toolbar-title-md   { 
+        font-size: 14px;
+        font-family: "Lato";  
+    }
+
+    .contcolorWhite {
+        //background-color: #ffffff; 
+    }
+
+    .div-footer-rows {  
+        margin-top: 67px;
+        margin-bottom: 20px;
+    }
+
+    .item-md    {  
+        border-radius: 110px !important; 
+        border: 1px solid #AAAAAA !important;
+        padding-left: 0px !important; 
+        color: #46476A;
+        background-color: #fff;
+        font-size: 14px !important;
+        border-radius: 6px;
+        text-indent: 38px;
+        height: 3.8rem; 
+    }
+
+    .item-block {  
+       min-height: 3.8rem;    
+    }
+    
+    .contenttittle  {
+        text-align: center;
+        font-size: 14px;
+        color:#464646;
+        font-family: "Lato-Bold","Lato-Heavy";   
+    }
+    .content-md { 
+        color: #464646;
+        background-color: #f9fbfc;
+        background-image: url('../assets/imgs/newimg/books-outline1.png');           
+    }
+    
+    .row-mtop   {
+        margin-top: 26px;
+    }
+
+    .toolbar-title-md   {
+        padding: 0 12px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #191A45;
+    }
+   
+    .scroll-content{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .gridcl{
+        padding-left: 24px !important;
+        padding-right: 24px !important;  
+    }
+
+    a {
+        color: #3096F7;
+        text-decoration: underline;
+        font-size: 14px;
+    }
+    p   {
+        color: #191A45; 
+        font-size: 14px;
+    }
+
+    .button-md{
+        font-family: "Lato"; 
+    }
+
+    .item-md.item-block .item-inner {
+        border-bottom: none !important;
+        border-radius: 110px !important;
+    }
+    .button-md { 
+        box-shadow:none;
+        -webkit-box-shadow:none;
+        border-radius: 32px !important; 
+        width: 98%;
+        margin-left: 4px !important;
+        background-color: $content-btn3;  
+        height: 3.8rem;
+      }
+
+      .list-md {
+        margin: -1px 0 23px;
+      } 
+
+      .div-footer   { 
+        margin-top: 88px;
+        font-family: "Lato-Bold","Lato-Heavy";  
+    }
+
+    .a-forgetpass {    
+        color: #464646;
+        font-family: "Lato-Bold","Lato-Heavy";
+    } 
+
+    .item-pass {
+        margin-top: 23.33px;     
+    }
+     
+    .a-tittle   {  
+        color: map-get($ContentColor , atitle );  
+    }
+
+    .item-md.item-input.input-has-focus .item-inner {
+        box-shadow: none !important;
+      }
+      
+      .list-md .item-input.input-has-focus:last-child {
+        box-shadow: none !important;
+      }
+      
+      .list-md .item-input.input-has-focus:last-child .item-inner {
+        box-shadow: none;
+      }
+      
+      .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+        box-shadow: none !important;
+      }
+      
+      .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+        box-shadow: none !important;
+      }
+      
+      .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner {
+        box-shadow: none;
+      }
+      
+      .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+        box-shadow: none !important;
+      }
+      
+      .list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {  
+        box-shadow: none !important;
+      }
+
+          
+    .img-user {  
+        width: 25px;
+        position: absolute;
+        z-index: 1000;
+        left: 32px;
+        margin-top: 7px;
+    } 
+ 
+    .img-pass {  
+        width: 25px;
+        position: absolute;
+        z-index: 1000;
+        left: 32px;
+        margin-top: 29px; 
+    } 
+
+    .img-logo {   
+        width: 60%; display: block; margin: 0 auto;
+    }
+
+    .errormsg {
+        color: #595a79;
+        font-size: 14px;
+        margin-left: 4px;
+    }
+
+    .img-pass1 {
+        width: 25px;
+        position: absolute;
+        z-index: 1000;
+        left: 32px;
+        margin-top: 16px !important; 
+    }
+
+    .errmsgcl {
+        font-size: 14px;
+        font-family: "Lato-Bold","Lato-Heavy"; 
+    }
+
+
+    @media only screen and (min-height:715px) { 
+           
+    .div-footer {
+        margin-top: 187px;
+        font-family: "Lato-Bold","Lato-Heavy";
+    }
+}  
+     
+}

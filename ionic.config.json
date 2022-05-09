@@ -1,0 +1,7 @@
+{
+  "name": "LWSconnect",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

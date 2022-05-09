@@ -1,0 +1,60 @@
+page-paymentpopup {
+    .div-main   {
+        width: 95%;    
+        border-radius:6px;
+        margin: auto;
+        background-color: #FFFFFF;
+        margin-top: 69%;    
+        box-shadow: 0 0 0 -5px white, 0 3px 20px black;   
+    }  
+    .content-md    {     
+        background-color: rgba(0,0,0,0.7);
+    }
+    .content-ios   {    
+        background-color: rgba(0,0,0,0.7);
+    }
+    .button-md     {
+        background-color: #FFFFFF;
+        color: $content-btn3;
+        font-size: 14px;
+        font-family: $Lato-black;  
+        box-shadow: none !important;  
+        -webkit-box-shadow: none !important; 
+    }
+    .button-ios    {
+       background-color: #FFFFFF;
+       color: $content-btn3;   
+       font-size: 14px;
+       font-family: $Lato-black;  
+       box-shadow: none !important;
+       -webkit-box-shadow: none !important;  
+    }
+    .row   {  
+    width: 85%;
+    margin: auto;
+    }
+    .outerrow  {
+       padding-bottom: 7px; 
+    }
+    [col-12]   {    
+       margin-top: 20px; 
+    }
+    .p-text     {
+       color: #363636;
+       text-align: left;
+       font-size:14px;  
+       font-family:$Lato-regular;   
+    }
+    .p-text1   { 
+       color: #707070;
+       text-align: left;
+       font-size:13px;  
+       font-family:$Lato-regular;    
+    }
+    .p-header {
+        color: #363636;
+        text-align: left;  
+        font-size:16px;  
+        font-family:$Lato-bold;     
+    }
+}

@@ -1,0 +1,120 @@
+<!--
+  Generated template for the TaskPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header >
+    <ion-navbar > 
+            <ion-buttons left> 
+                    <button ion-button icon-only (click)="NotifyBtn()">       
+                      <!-- <img  class="img-notify" src="assets/imgs/newimg/notification.png"> -->
+                      <ion-icon name="md-arrow-back"></ion-icon> 
+                    </button>
+            </ion-buttons>     
+      <ion-title text-center>{{ PostTitle }}</ion-title>          
+    </ion-navbar>
+  </ion-header> 
+
+<ion-content >   
+    <ion-grid class="gridcl">  
+        <div *ngFor="let tasklists of tasklistArr;let i= index;">
+        <ion-row no-padding no-margin class="rows-header">
+          <ion-col col-12 no-padding no-margin  text-center>    
+            <div class="col-maindiv">              
+               <div class="col-subdiv1" [ngStyle]="(tasklists.modifydate == 'Today') ? { 'width': '42%' } : {  } "></div>
+               <div class="col-subdiv2" [ngStyle]="(tasklists.modifydate == 'Today') ? { 'width': '16%' } : {  } "><p no-padding no-margin class="p-span">{{ tasklists.modifydate }}</p></div>
+               <div class="col-subdiv3" [ngStyle]="(tasklists.modifydate == 'Today') ? { 'width': '42%' } : {  } "></div>
+            </div>   
+          </ion-col>
+        </ion-row>   
+    <ion-list> 
+        
+        
+        <ion-row no-padding no-margin *ngFor="let message of tasklists.second_array; let i=index;">
+
+
+                <ion-col col-2 no-padding no-margin *ngIf="message.hands == 2"  [ngStyle]="(i != 0) ? { 'margin-top': '15px' } : { 'margin-top': '15px' } ">            
+                        <img src="{{ message.Usrimgleft }}" class="img-profile" *ngIf="message.Usrimgleft !=''"> 
+                        <img src="assets/icon/deafault_men.jpg" class="img-profile" *ngIf="message.Usrimgleft ==''">
+                </ion-col>
+
+        <ion-col col-10 no-padding no-margin *ngIf="message.hands == 2" [ngStyle]="(i != 0) ? { 'margin-top': '17px' } : { 'margin-top': '17px'  } ">     
+            <p no-padding no-margin class="Leftheadermsg" >
+                {{ message.comment_author+", "+message.posttime }} 
+            </p> 
+                <ion-item no-padding no-margin [ngClass]="message.styleClass">
+                        <!-- <p text-wrap class="message-detail" no-padding no-margin > 
+                            {{message.comment_author}} 
+                        </p>  -->
+                         <!-- <div id="content_data" class="message-detail" [innerHTML]="message.comment_content | htmlbypas:message.comment_content:true">   </div>     -->
+                         <div  class="message-detail" [innerHTML]="message.comment_content | htmlbypas:'html'" text-wrap></div>
+                         <p text-wrap class="message-detail" no-padding no-margin  margin-top (click)="GotoNext1(message.wpurl,message.wptitle,message.wpextension)" *ngIf="message.wptitle !=''" style="color: blue;">{{ message.wptitle }}</p>         
+                </ion-item>
+        </ion-col> 
+           
+           
+            <ion-col col-10 no-padding no-margin *ngIf="message.hands == 1" [ngStyle]="(i != 0) ? { 'margin-top': '17px','padding-right':'9px' } : { 'margin-top': '17px','padding-right':'9px' } ">     
+                <p no-padding no-margin class="Rightheadermsg"> {{ message.posttime }}</p> <br>      
+            <ion-item no-padding no-margin [ngClass]="message.styleClass"> 
+                <!-- <p text-wrap class="message-detail" no-padding no-margin >         </p>  -->  
+                <!-- <div id="content_data" class="message-detail" [innerHTML]="message.comment_content | htmlbypas:message.comment_content:true">   </div>    -->  
+               <div  class="message-detail" [innerHTML]="message.comment_content | htmlbypas:'html'" text-wrap></div>          
+               <p text-wrap class="message-detail" no-padding no-margin  margin-top (click)="GotoNext1(message.wpurl,message.wptitle,message.wpextension)" style="color: blue;" *ngIf="message.wptitle !=''">{{ message.wptitle }}</p>      
+            </ion-item>
+            </ion-col>    
+   
+            <ion-col col-2 no-padding no-margin *ngIf="message.hands == 1"  [ngStyle]="(i != 0) ? { 'margin-top': '0px' } : {  } ">   <br>       
+                    <img src="{{ message.Usrimgleft }}" class="img-profile" *ngIf="message.Usrimgleft !=''"> 
+                        <img src="assets/icon/deafault_men.jpg" class="img-profile" *ngIf="message.Usrimgleft ==''">    
+            </ion-col>
+        </ion-row>
+
+
+    </ion-list> 
+</div>
+ 
+        <!-- <div class="MainDiv">
+            <div class="imagesec">
+                <p class="p-imagesec">P</p>    
+            </div>
+            <div class="textsec"> 
+                <p no-padding no-margin class="p-name">Peter</p>  
+            </div>  
+        </div>    
+      <div class="MainDiv1">   
+          <div style="padding-top: 35px;"> 
+              <p class="p-MainDiv1" no-padding no-margin>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>  
+          </div>
+      </div>  -->
+
+     </ion-grid> 
+</ion-content>
+<ion-footer no-padding no-margin no-shadow no-border>    
+    <ion-row no-margin no-padding class="gridcl" style="margin-bottom: 28px;" >   
+        <ion-col col-12 no-margin no-padding>  
+    
+        <div class="MainDivTxt1" id="clmsg" style="display: none;">    
+                <div style="padding-top: 10px;">    
+                    <ion-item class="item-txtarea"> 
+                        <ion-textarea rows="5" [(ngModel)]="replyarea" placeholder="Type your reply" #mobid (keypress)="MobCheck(mobid.value)"></ion-textarea>   
+                    </ion-item>     
+                    <img class="icon-imgtxtarea" src="assets/imgs/newimg/group553_18px.png" (click)="uploadpicture()">        
+                </div>   
+                <p *ngIf="!txtboolean" class="errormsg">Please enter a reply.</p>     
+                <p *ngIf="imgmetatitle!=''" class="errormsg" (click)="OpenViewer(imgmetatitle)"> {{ imgmetatitle }}</p>      
+        </div> 
+        
+
+<div style="width:100%;">   
+    <div style="width:96%;float: left;" (click)="SendReply()">
+        <button class="btn-play" ion-button full >REPLY</button>     
+     </div>   
+    <div style="width:19%;float: right;" menuToggle="right" >      
+        <img src="assets/imgs/newimg/group671.png" class="img-btnfooter">
+    </div>
+</div>
+        </ion-col>
+      </ion-row>  
+</ion-footer>

@@ -1,0 +1,110 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-header >
+  <ion-navbar > 
+    <ion-title text-center>SETTINGS</ion-title>      
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content > 
+    
+    
+  <ion-grid class="gridcl">
+     
+      <ion-list style="margin-top: 36px;margin-bottom: 73px;">  
+           
+          <ion-row no-margin no-padding>       
+              <ion-col col-12 no-margin no-padding text-center><p no-margin no-padding class="errmsgcl">{{ErrMsg}}</p></ion-col>
+            </ion-row> 
+
+<ion-row no-padding no-margin >  
+<ion-col col-12 no-padding no-margin text-center margin-bottom>            
+<img src="{{ pimg }}" class="img-profile" [ngStyle]="(pimg != 'assets/imgs/newimg/group550.png')?{ 'border-radius' : '50%','height':'13rem'} : {  }" (click)="UploadImage()">       
+</ion-col>
+</ion-row>    
+
+ <form [formGroup]="validation">  
+     
+          <img class="img-user" src="assets/imgs/newimg/group540.png">           
+          <ion-item class="item-pass">       
+             <ion-input type="email" [(ngModel)]="email" placeholder="Email ID" readonly formControlName="emailid"
+             [class.invalid]="!validation.controls.emailid.valid && (validation.controls.emailid.dirty|| submitAttempt)"></ion-input>  
+          </ion-item>    
+
+          <p *ngIf="!validation.controls.emailid.valid && (validation.controls.emailid.dirty|| submitAttempt)" class="errormsg" >*Please enter mobile number.</p>  
+
+          <img class="img-pass" src="assets/imgs/newimg/group544.png" [ngStyle]="{'margin-top': !validation.controls.emailid.valid && (validation.controls.emailid.dirty|| submitAttempt) ? '16px' : '29px'}">  
+
+          <ion-item class="item-pass">     
+             <ion-input type="number" [(ngModel)]="mobile" placeholder="Mobile Number"  #mobid (keypress)="MobCheck(mobid.value)" formControlName="mobile"
+             [class.invalid]="!validation.controls.mobile.valid && (validation.controls.mobile.dirty|| submitAttempt)"></ion-input>  
+          </ion-item>  
+    
+          <p *ngIf="!validation.controls.mobile.valid && (validation.controls.mobile.dirty|| submitAttempt)" class="errormsg" >*Please enter mobile number.</p>   
+
+          <img class="img-pass" src="assets/imgs/newimg/group673.png" [ngStyle]="{'margin-top': !validation.controls.mobile.valid && (validation.controls.mobile.dirty|| submitAttempt) ? '16px' : '29px'}">      
+          <ion-item class="item-pass">     
+             <ion-input type="text" [(ngModel)]="addresss" placeholder="Street Address" formControlName="addresss"
+             [class.invalid]="!validation.controls.addresss.valid && (validation.controls.addresss.dirty|| submitAttempt)"></ion-input>  
+          </ion-item>  
+
+          <p *ngIf="!validation.controls.addresss.valid && (validation.controls.addresss.dirty|| submitAttempt)" class="errormsg" >*Please enter address.</p>   
+
+          <ion-row no-padding no-margin>
+            <ion-col no-padding no-margin col-6 style="padding-right: 7px;"> 
+             <ion-item class="item-passhalf" style="text-indent: 14px;">      
+                <ion-label floating *ngIf="onCountry" [ngStyle]="(onCountry)?{'display':'none'}:{ }">Country</ion-label> 
+                <ion-label *ngIf="!onCountry">Country</ion-label>  
+                 <ion-select [(ngModel)]="CountrySelect" interface="popover" [ngStyle]="(onCountry)?{'margin-top':'0px','margin-left':'0px'}:{}" #C (ionChange)="onChangeCountry()" formControlName="CountrySelect"
+                 [class.invalid]="!validation.controls.CountrySelect.valid && (validation.controls.CountrySelect.dirty|| submitAttempt)">    
+                   <ion-option value="India">India</ion-option>
+                   <ion-option value="United States of America">United States of America</ion-option>  
+                 </ion-select>
+              </ion-item>  
+
+              <p *ngIf="!validation.controls.CountrySelect.valid && (validation.controls.CountrySelect.dirty|| submitAttempt)" class="errormsg" >*Please enter country.</p>   
+
+            </ion-col>   
+           
+            <ion-col no-padding no-margin col-6 style="padding-left: 7px;"> 
+              <ion-item class="item-passhalf">         
+                <ion-input type="text" [(ngModel)]="states" placeholder="State" formControlName="states"
+                [class.invalid]="!validation.controls.states.valid && (validation.controls.states.dirty|| submitAttempt)"></ion-input>  
+             </ion-item> 
+             
+             <p *ngIf="!validation.controls.states.valid && (validation.controls.states.dirty|| submitAttempt)" class="errormsg" >*Please enter state.</p>   
+            </ion-col>
+          </ion-row>     
+
+          <ion-row no-padding no-margin>
+            <ion-col no-padding no-margin col-6 style="padding-right: 7px;">  
+              <ion-item class="item-passhalf" >     
+                <ion-input type="text" [(ngModel)]="zipcode" placeholder="Zip" formControlName="zipcode"
+                [class.invalid]="!validation.controls.zipcode.valid && (validation.controls.zipcode.dirty|| submitAttempt)"></ion-input>  
+             </ion-item>  
+             <p *ngIf="!validation.controls.zipcode.valid && (validation.controls.zipcode.dirty|| submitAttempt)" class="errormsg" >*Please enter zip code.</p>   
+            </ion-col>
+          </ion-row>
+
+  </form> 
+       
+      </ion-list> 
+
+      <ion-row no-margin no-padding margin-bottom>   
+        <ion-col col-12 no-margin no-padding>    
+           <button ion-button full (click)="GotoNext()" [disabled]="!validation.valid">UPDATE PROFILE</button>   
+        </ion-col>
+      </ion-row>
+       
+  </ion-grid>
+
+
+    
+</ion-content>

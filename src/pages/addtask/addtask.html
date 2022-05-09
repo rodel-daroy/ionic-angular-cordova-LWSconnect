@@ -1,0 +1,88 @@
+<!--
+  Generated template for the AddtaskPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header >
+    <ion-navbar >
+        <ion-buttons left> 
+            <button ion-button icon-only (click)="NotifyBtn()">       
+              <!-- <img  class="img-notify" src="assets/imgs/newimg/notification.png"> -->
+              <ion-icon name="md-arrow-back"></ion-icon> 
+            </button>
+    </ion-buttons> 
+      <ion-title text-center>CREATE A TASK</ion-title>      
+    </ion-navbar>
+</ion-header>
+  
+  <ion-content > 
+    
+    <ion-grid class="gridcl">
+
+      <ion-row no-margin no-padding>       
+        <ion-col col-12 no-margin no-padding text-center>
+          <p no-margin no-padding class="errmsgcl">{{ErrMsg}}</p>
+        </ion-col>
+      </ion-row>
+
+      <form [formGroup]="validation"> 
+        <ion-list class="ionlistcl">  
+
+            <img class="img-user" src="assets/imgs/newimg/group545.png">       
+            <ion-item class="item-user" >       
+              <ion-label floating *ngIf="onTaskPower" [ngStyle]="(onTaskPower)?{'display':'none'}:{ }">Category*</ion-label>     
+              <ion-label *ngIf="!onTaskPower" style="color: #464646;">Category*</ion-label>    
+               <ion-select [(ngModel)]="PowerSelect" interface="popover" [ngStyle]="(onTaskPower)?{'margin-top':'6px'}:{}" #C (ionChange)="onChangeTaskPower()" formControlName="PowerSelect"
+               [class.invalid]="!validation.controls.PowerSelect.valid && (validation.controls.PowerSelect.dirty|| submitAttempt)" disabled ="{{isEnabled}}">   
+                 <ion-option [value]="item.term_id" *ngFor="let item of SelectArr">{{ item.name }}</ion-option>       
+               </ion-select>
+            </ion-item>
+
+            <p *ngIf="!validation.controls.PowerSelect.valid && (validation.controls.PowerSelect.dirty|| submitAttempt)" class="errormsg">*Please select a category.</p>    
+
+            <img class="img-pass" src="assets/imgs/newimg/group546.png">  
+            <ion-item class="item-pass">    
+               <ion-input type="text" [(ngModel)]="title" placeholder="Title*" formControlName="title"
+               [class.invalid]="!validation.controls.title.valid && (validation.controls.title.dirty|| submitAttempt)"></ion-input> 
+            </ion-item>
+  
+            <p *ngIf="!validation.controls.title.valid && (validation.controls.title.dirty|| submitAttempt)" class="errormsg">*Please enter a title.</p> 
+
+          <!-- <div class="MainDiv">  
+              <div class="imagesec">
+                  <img class="imgagesrc-img" src="assets/imgs/newimg/group546.png">   
+              </div>  
+              <div class="textsec"> 
+                  <p no-padding no-margin style="margin-left: 17%;margin-top: 13px;color: #4D7390;">Enter Subject</p>   
+              </div>  
+          </div> -->      
+  
+          <div class="MainDiv1"> 
+  
+            <div >  
+                <ion-item class="item-txtarea">    
+                    <ion-textarea rows="5" [(ngModel)]="contents" placeholder="Please add task details here." formControlName="contents"
+                    [class.invalid]="!validation.controls.contents.valid && (validation.controls.contents.dirty|| submitAttempt)"></ion-textarea>
+                </ion-item> 
+                <img class="icon-imgtxtarea" src="assets/imgs/newimg/group553_18px.png" (click)="uploadpicture()">       
+            </div>
+  
+          </div>   
+  
+          <p *ngIf="!validation.controls.contents.valid && (validation.controls.contents.dirty|| submitAttempt)" class="errormsg">*Please enter a contents.</p>   
+  
+          <p *ngIf="imgmetatitle!=''" class="errormsg" (click)="OpenViewer(imgmetatitle)"> {{ imgmetatitle }}</p>      
+          
+        </ion-list>   
+  </form>    
+        <ion-row no-margin no-padding margin-bottom>   
+          <ion-col col-12 no-margin no-padding>        
+             <button ion-button full (click)="GotoNext()" [disabled]="!validation.valid">GO</button>  
+          </ion-col>
+        </ion-row>   
+         
+    </ion-grid>
+     
+  </ion-content>

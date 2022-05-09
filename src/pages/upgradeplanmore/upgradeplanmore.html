@@ -1,0 +1,67 @@
+<!--
+  Generated template for the UpgradeplanmorePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center >BUY ADDITIONAL HOURS</ion-title>  
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content > 
+
+  
+  <ion-grid class="gridcl">    
+      <ion-row no-padding no-margin class="rows-header">
+        <ion-col col-12 no-padding no-margin text-center> 
+          <p no-padding no-margin class="p-title">CURRENT ACTIVE PLAN</p> 
+          <p no-padding no-margin class="p-desc">After buying additional hours, hours will get added in your account.</p>
+        </ion-col>
+      </ion-row>
+   </ion-grid> 
+
+
+   <div class="slide_box"  >   
+      <div class="slide-div" >
+         <div class="slider-style">
+              <ion-slides  slidesPerView="3.1"  (ionSlideDidChange)="slideChanged()"  spaceBetween="10" slidesPerView="auto" style="padding-left: 29px;">     
+                  <ion-slide (click)="showImage()" class="slide-style">
+                      <ion-card style="border-top: 5px solid #B27CF5;" >    
+                        <ion-card-content> 
+                          <ion-row no-padding no-margin style="margin-top: 23.69px;">
+                            <ion-col col-12 text-center no-padding no-margin>
+                              <p no-padding no-margin class="p-title1">GOLD</p>
+                              <p no-padding no-margin class="p-desc1">10 hrs bucket</p> 
+                            </ion-col>
+                          </ion-row>
+                          <ion-row no-padding no-margin style="margin-top: 21.35px;">
+                            <ion-col col-12 text-center no-padding no-margin>
+                              <p no-padding no-margin  class="p-title2">$269</p>
+                            </ion-col>
+                          </ion-row>
+                          <ion-row no-padding no-margin style="margin-top: 18.50px;">
+                            <ion-col col-12 text-center no-padding no-margin>   
+                              <p no-padding no-margin  class="p-title3">Commit 10hrs work and</p>
+                              <p no-padding no-margin  class="p-title3">you can use these hours</p>
+                              <p no-padding no-margin class="p-title3">anytime during 30 days..</p>
+                            </ion-col>
+                          </ion-row>  
+                          <ion-row no-padding no-margin style="margin-top: 48px;"     margin-bottom>
+                            <ion-col col-12 text-center no-padding no-margin text-center>    
+                                <button ion-button (click)="GotoNext()" class="btn-play">BUY NOW</button>    
+                            </ion-col>
+                          </ion-row>  
+                    </ion-card-content>
+                      </ion-card> 
+                     </ion-slide>
+              </ion-slides>
+       </div>
+      </div>
+   </div>
+
+</ion-content>

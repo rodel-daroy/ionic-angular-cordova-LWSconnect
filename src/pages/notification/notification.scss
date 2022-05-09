@@ -1,0 +1,58 @@
+page-notification { 
+    .toolbar-background-md { 
+        border-color: map-get($HeaderList, BackgroundC);  
+        background: map-get($HeaderList, BackgroundC);  
+    }
+
+    .content-md { 
+        color: map-get($ContentColor, DarkSlate); 
+        background-color: map-get($ContentColor,itemBgWhite);   
+        //background-image: url('../assets/imgs/newimg/books-outline1.png');        
+    } 
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #fff;
+        background-color: transparent;
+    }
+
+    .toolbar-title-md   {
+        padding: 0 12px;
+        font-size: 14px;
+        font-weight: bold;
+        color: map-get($colors, whitecolor);  
+        font-family: $Lato-regular; 
+        margin-right: 65px;     
+    }
+   
+    .scroll-content{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .gridcl{
+        padding-left: 24px !important;
+        padding-right: 24px !important;  
+    }
+
+    .item-md {
+     padding-left: 0px;   
+     //border-left: 4px solid map-get($ContentColor,itemleftborder); 
+    //  -webkit-box-shadow: 0 8px 6px -9px #ccc; 
+    //  -moz-box-shadow: 0 8px 6px -9px #817f7f;  
+    //  box-shadow: 0 10px 7px -9px #817f7f;
+    border-bottom: 1px solid #c8c5c5; 
+    //margin-bottom: 8px;     
+    }
+    .p-txt {
+        padding-left: 10px;  
+    }
+
+    .item-block {
+        min-height: 6.4rem; 
+    }
+
+    .item-md [item-left], .item-md [item-right], .item-md [item-start], .item-md [item-end] {
+        margin:0px !important;  
+    }
+
+
+}

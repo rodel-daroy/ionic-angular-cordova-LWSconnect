@@ -1,0 +1,221 @@
+page-buyadditional {
+
+    .toolbar-background-md {
+        border-color: map-get($HeaderList, BackgroundC1);  
+        background: map-get($HeaderList, BackgroundC1); 
+    }
+    .content-md { 
+        color: map-get($ContentColor, DarkSlate); 
+        background-color: map-get($ContentColor,itemBgWhite);       
+    }   
+
+    .toolbar-title-md   {
+        margin-left: 25px !important;
+        padding: 0 12px;
+        font-size: 14px;
+        font-family: $Lato-regular;
+        color: map-get($ContentColor, itemBgWhite);
+        margin-right: 20%;
+    } 
+    .scroll-content{  
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .gridcl{
+        padding-left: 24px !important;
+        padding-right: 24px !important;  
+    }
+    .img-notify {
+        width: 24px;
+        margin-right: 9px;
+    }
+
+       .p-txt {
+           padding-left: 10px;  
+       }
+   
+       .list-md {
+        margin-top: 19px !important;
+       }
+
+       .item-md ion-avatar ion-img, .item-md ion-avatar img {
+        margin-left: 11px; 
+    }
+    .name-maindiv {
+        width: 100%;
+    }
+    .name-subdiv1 {
+        width: 89%;
+        float: left;
+    }
+    .name-subdiv2{
+        width: 8%;
+        background: #FFC01D;
+        color: #FFC01D;
+        border-radius: 17px;
+        float: right;
+    }
+    .name-p {
+        font-size: 16px;
+        color: map-get($ContentColor,DarkSlate);
+        font-family:$Lato-heavy; 
+    }
+
+    .item-md p {
+        width: 100%;  
+    }
+
+    .p-desc {
+        font-family: $Lato-medium;
+        font-size: 14px;  
+        color:map-get($ContentColor , PDesc ); 
+        max-width: 91%;
+    }    
+    .p-assignto {
+        font-family: $Lato-bold;
+        font-size: 14px;
+        color:map-get($ContentColor , DarkSlate ); 
+    }
+    .p-lastseen {
+        font-family: $Lato-medium;  
+        font-size: 12px;
+        color:map-get($ContentColor , DarkSlate ); 
+    }
+ 
+   
+    .label-md {
+        margin: 13px 0px 13px 0;
+    }
+
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #fff;
+        background-color: transparent;
+    }
+
+    .item-outer{
+        border-left: 4px solid #AE29E6; 
+        border-top: 2px solid #eceaea;
+        border-right: 2px solid #eceaea;
+        padding-left: 0px;     
+        border-left: 4px solid map-get($ContentColor,itemleftborder); 
+       border-bottom: 2px solid #c8c5c5; 
+       margin-bottom: 8px;  
+    }
+
+
+    .item-md.item-block .item-inner {
+        padding-right: 0px;
+        border-bottom: none;
+    }
+
+
+    .select-text {
+        min-width: 85px;
+    }
+
+    .select-md .select-icon .select-icon-inner{
+        left: -71px; 
+        top: 80%;
+    }
+
+    .item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+        color: #464646;
+    }
+
+    .item-md {
+        padding-left: 5px;
+    }
+
+    .label-md {
+        margin: 13px 0px 4px 0;
+    }
+ 
+
+    .rows-outer {    
+    border-left: 2px solid #eceaea;
+    border-right: 2px solid #eceaea;
+    border-bottom: 2px solid #c8c5c5;
+    margin-bottom: 8px;
+    max-height: 20rem;
+    box-shadow: 5px 0px 25px -9px #817f7f;
+    }
+
+    .p-top {  
+    padding-top: 13px;  
+    color: map-get($ContentColor,DarkSlate);  
+    font-family: $Lato-heavy;   
+    font-size: 18px;
+    }
+    
+    .p-middle { 
+        color: map-get($ContentColor , DarkSlate );
+        font-family: $Lato-medium;  
+        font-size: 13px;
+    }
+
+  .btnOptions { 
+    width: 99%;
+    margin-top: 10px;
+    border-color: $content-btn3;
+    color: $content-btnWhite;
+    background: $content-btn3;
+    box-shadow:none;
+    -webkit-box-shadow:none;    
+    height: 4.6rem;
+    border-radius: 32px; 
+  }
+  
+  ion-segment {
+    background: #a28671;
+  }
+   
+  .divtxtimg {
+    width: 100%;
+    margin-top: 18px;
+  }
+
+  .divtxt{
+    width: 80%;
+    float: left;
+    border-bottom: 1px solid #D5D5D5;
+    padding-bottom: 3px;
+  }
+
+  .p-divtxt {
+    font-size:14px;
+    font-family: $Lato-regular;
+    color:#464646;  
+  }
+
+  .divimg {
+    width: 11%;
+    float: left;
+    border-bottom: 1px solid #D5D5D5;
+    padding-bottom: 3px;      
+  }
+
+
+
+  .divmain {
+    width: 100%;
+  } 
+  .divsub1 {
+    width: 24%;
+    float: left;
+  }
+  .divPprice {
+    color: #A28671;
+    font-size: 28px;
+    font-family: $Lato-heavy;
+  }
+  .divsub2{
+    width: 60%; 
+    float: left;
+  }
+  .divPTotal {
+    font-size: 13px;
+    margin-top: 9px;
+    font-family: $Lato-medium;
+  }
+
+}

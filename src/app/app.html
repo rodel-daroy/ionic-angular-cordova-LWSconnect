@@ -1,0 +1,239 @@
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+
+<ion-menu  id="authenticated" side="left" type="overlay" persistent="true" [content]="content">    
+        <ion-content >
+
+            <ion-item no-lines style="height: 3.8rem;margin-top: 16px;">       
+                <button menuClose="authenticated" clear ion-button (click)="CreateBtn()"> 
+                   <img src="assets/imgs/newimg/path369.png" style="width: 6%;margin-left: -37px;" /> 
+                  <label style="margin-left: 10px; color: #fff; font-family: Lato-Regular;">Create a Task</label>
+                </button>
+            </ion-item>
+   
+            <ion-item no-lines style="height: 3.8rem;">   
+                    <button menuClose="authenticated" clear ion-button (click)="AllTaskBtn()"> 
+                       <img src="assets/imgs/newimg/move.png" style="width: 6%;     margin-left: 5px;" /> 
+                      <label style="margin-left: 10px; color: #fff; font-family: Lato-Regular;">Tasks</label> 
+                      <div class="notification2"><div class="notification1">{{ newpost }}</div></div> 
+                      <div class="notification4"><div class="notification3">{{ TotalPost }}</div></div>
+                    </button> 
+            </ion-item>   
+
+            <ion-item no-lines style="height: 3.8rem;">
+              <button menuClose="authenticated" clear ion-button (click)="ProfileBtn()"> 
+                 <img src="assets/imgs/newimg/settings.png" style="width: 6%;    margin-left: -31px;" /> 
+                <label style="margin-left: 10px; color: #fff; font-family: Lato-Regular;">Profile Settings</label>
+              </button>
+          </ion-item>
+ 
+     
+          <!-- <ion-item no-lines style="height: 3.8rem;">
+                        <button menuClose="authenticated" clear ion-button (click)="ProfileBtn()"> 
+                           <img src="assets/imgs/newimg/credit-cards-payment.png" style="width: 6%;       margin-left: -21px;" />  
+                          <label style="margin-left: 10px; color: #fff; font-family: Lato-Regular;">Payment History</label>
+                        </button>
+                </ion-item>
+
+                <ion-item no-lines style="height: 3.8rem;">
+                      <button menuClose="authenticated" clear ion-button (click)="ProfileBtn()"> 
+                         <img src="assets/imgs/newimg/history-clock-button.png" style="width: 6%;             margin-left: -44px;" /> 
+                        <label style="margin-left: 10px; color: #fff; font-family: Lato-Regular;">Hours Report</label>
+                      </button>
+                  </ion-item> -->
+
+                   
+  
+                  <ion-item no-lines style="height: 3.8rem;">    
+                            <button menuClose="authenticated" clear ion-button (click)="LogoutBtn()">     
+                               <img src="assets/imgs/newimg/exits.png" style="width: 6%;    margin-left: -90px;" />  
+                              <label style="margin-left: 10px; color: #fff; font-family: Lato-Regular;">Logout</label>
+                            </button>
+                        </ion-item>
+   
+        </ion-content>
+
+        <style>
+                .item-md .item-button {
+                  color:#fff;
+                  font-family: "Lato-Bold";
+                  font-size:16px;
+                  text-transform: inherit;
+                }
+                .item-ios .item-button {
+                  color:#fff;
+                  font-family: "Lato-Bold";
+                  font-size:16px;
+                  text-transform: inherit;
+                }
+                .scroll-content {
+                  top:35px ! important;
+                }
+                ion-menu[type=overlay] {
+                  z-index: 80;
+                  margin-top: 56px;   
+              } 
+              .md ion-menu[type=overlay] .menu-inner {
+                  width: 72%;    
+              }
+              .content-md {
+              background-color: rgba(0,0,0,0.5);
+              }
+              .content-md[_ngcontent-c0] {
+              margin-top: 0px !important;
+              }
+              .item-md {
+              padding-left: 0;
+              padding-right: 0;
+              position: relative;
+              font-size: 1.6rem;
+              font-weight: normal;
+              text-transform: none;
+              color: #fff;
+              background-color: rgba(0,0,0,0.5);
+           
+              }
+
+.item-block{
+  min-height: 0px !important; 
+}
+              
+          .notification2 {
+              background: #ffc01d;
+              width: 10%;
+              border: 1px solid #fff;
+              margin-left: 17px;
+              border-radius: 92px;
+              height: 18px;
+          }
+              .notification1 {
+              background: #FFC01D;
+              margin-top: 2px;
+              border-radius: 92px;
+              font-size: 10px;
+              font-family: Lato-Bold;
+              }
+          
+              .notification4 {
+              background: #0049A3;  
+              width: 10%;
+              border: 1px solid #fff;
+              margin-left: 17px;
+              border-radius: 92px;
+              height: 18px;
+          }
+              .notification3 {
+              background: #0049A3;
+              margin-top: 2px;
+              border-radius: 92px;
+              font-size: 10px;
+              font-family: Lato-Bold;
+              }
+          
+              .label-md {
+               margin: 0px !important;
+          }
+
+          .notification2[_ngcontent-c0] {
+               margin-left: 49px;
+          } 
+
+          </style>
+</ion-menu>
+
+
+<ion-menu [content]="content"  class="menu-style" side="right" id="menu2" width="335"  >
+    <ion-content style="margin-top: 40px;">  
+        <ion-list no-lines  > 
+                <ion-item style="padding-top: 8px;"> 
+                    <ion-label floating *ngIf="onTaskStatus" [ngStyle]="(onTaskStatus)?{'display':'none'}:{ }">Open</ion-label> 
+                        <ion-label *ngIf="!onTaskStatus" style="margin-left: 18px !important;" class="txtright">Open</ion-label>    
+                         <ion-select [(ngModel)]="OpenTask" interface="popover" [disabled]="onTaskStatus">   
+                           <ion-option value="22">Open</ion-option>
+                           <ion-option value="23">Closed</ion-option>    
+                         </ion-select>
+                </ion-item>
+                <ion-item  style="    padding-top: 8px;">  
+                    <ion-label floating *ngIf="onTaskPower" [ngStyle]="(onTaskPower)?{'display':'none'}:{ }">Open</ion-label>       
+                        <ion-label style="margin-left: 18px !important;" class="txtright" *ngIf="!onTaskPower">Power BI Visualization</ion-label>         
+                         <ion-select [(ngModel)]="PowerBI" interface="popover" [disabled]="onTaskPower" >   
+                           <ion-option [value]="item.term_id" *ngFor="let item of CatArr">{{ item.name }}</ion-option>  
+                         </ion-select>
+                </ion-item>  
+            <button menuClose="menu2" ion-item   style="margin-top: 3px; ">       
+              <img src="assets/imgs/newimg/ticket.png" style="margin-bottom: -4px;  width: 24px !important;margin-right: 20px;margin-left: 16px;">   
+              <div style="margin-top: -22px;margin-left: 52px;" class="txtright">Task <br>#{{ TicketID }}</div> 
+            </button>  
+            <button menuClose="menu2" ion-item >  
+                    <img src="assets/imgs/newimg/calendar.png" style="margin-bottom: -4px;  width: 24px !important;margin-right: 20px;margin-left: 16px;">   
+                    <div style="    margin-top: -26px;
+                    margin-left: 52px;
+                    margin-bottom: 8px;
+                    width: 80%;" class="txtright">Created <br>{{ createDate }}</div> 
+                  </button>
+
+                  <button menuClose="menu2" ion-item >   
+                        <img src="assets/imgs/newimg/passage.png" style="margin-bottom: -4px;  width: 24px !important;margin-right: 20px;margin-left: 16px;">   
+                        <div style="margin-top: -22px;margin-left: 52px;" class="txtright">Updated <br>{{ updateTaskd }}</div>     
+                      </button> 
+
+                      <!-- <button menuClose="menu2" ion-item (click)="openPage()" >    
+                        <img src="assets/imgs/newimg/sent-mail.png" style="margin-bottom: -4px;  width: 24px !important;margin-right: 20px;margin-left: 16px;">   
+                        <div style="margin-top: -22px;margin-left: 52px;color:#CBB2A0" class="txtright" (click)="sendEmail()">Send Transcript to your<br>Email</div>    
+                      </button>  -->
+                         
+                       
+        </ion-list>  
+ 
+    </ion-content>
+    <style> 
+    .select-md .select-icon {
+        position: relative;
+        margin-right: 32px;
+        margin-top: -9px;
+        width: 12px !important;
+        height: 16px !important; 
+    }
+
+    .select-md .select-icon .select-icon-inner {
+        background-image: url(../assets/imgs/newimg/arrow-down15.png);
+        width: 17px !important;
+        height: 10px !important;
+        left: 33px;
+        top: 56%;
+        margin-top: 3px !important;
+        position: absolute;
+        border-top: none !important;
+        border-right: none !important;
+        border-left: none !important;
+        color: #999;
+        pointer-events: none;
+    } 
+    .item-cover {
+      width: 90%;
+    margin-left: 6%;
+    border-bottom: 1px solid #707070; 
+    }
+
+    .content-md[_ngcontent-c0][_ngcontent-c0] {
+    margin-top: 0px !important;
+    background: #000;
+    opacity: 0.8; 
+    }  
+    
+    .label-md {
+    margin: 13px 8px 3px 0;
+}   
+
+.item-label-stacked .select-md, .item-label-floating .select-md {
+    padding-left: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.menu-inner {
+    width: 221px !important;  
+}
+     
+    </style>
+ </ion-menu>

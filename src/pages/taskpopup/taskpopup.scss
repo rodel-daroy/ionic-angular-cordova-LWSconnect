@@ -1,0 +1,75 @@
+page-taskpopup {  
+    .div-main{
+        width: 100%;
+        border-radius: 6px;
+        margin: auto;
+        //margin-top: 21%; 
+        margin-top: 0%; 
+    }
+
+    .content-md{   
+        background-color: rgba(0,0,0,0.7);
+    }
+    .content-ios{    
+        background-color: rgba(0,0,0,0.7);
+    }
+
+    .button-md {
+        background-color: #FFFFFF;
+        color: #00408A;
+        font-size: 17px;
+        font-family: "Lato-Black";  
+        box-shadow: none !important;  
+        -webkit-box-shadow: none !important; 
+    }
+    .button-ios {  
+       background-color: #FFFFFF;
+       color: #00408A; 
+       font-size: 17px;
+       font-family: "Lato-Black";
+       box-shadow: none !important;
+       -webkit-box-shadow: none !important;  
+    }
+
+    .rowbtn {  
+    margin: auto;
+    border: 1px solid #FFFFFF;
+    min-height: 8.8rem;
+    }
+
+    .p-text {
+       color: #363636;
+       text-align: left;
+       font-size:15px;  
+       font-family:"Lato-Regular";    
+    }
+    .divinner1 {
+        width: 25%;
+        float: left;
+        text-align: right;
+    }
+
+    .divinner2 {
+    width: 63%;
+    float: left;
+    }
+
+    .divinner3 {
+        color: #fff;
+        width: 86%;
+        font-size: 17px;
+        margin-top: -20px;
+        text-align: left;    
+        font-family: $Lucida-Handwriting-Italic;
+    }
+
+    .rowstop {
+      padding-top: 18%;
+    }
+
+    @media only screen and (min-height:732px){     
+        .rowstop {
+            padding-top: 11.5%; 
+          }
+    } 
+}

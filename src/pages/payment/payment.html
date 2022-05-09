@@ -1,0 +1,100 @@
+<!--
+  Generated template for the PaymentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-header >
+  <ion-navbar > 
+    <ion-title text-center>CHECKOUT</ion-title>      
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+
+    <ion-grid class="gridcl" > 
+
+      <ion-row no-margin no-padding>       
+        <ion-col col-12 no-margin no-padding text-center><p no-margin no-padding class="errmsgcl">{{ErrMsg}}</p></ion-col>
+      </ion-row>
+
+        <ion-row no-padding no-margin class="rows-headersub">   
+            <ion-col col-12 no-padding no-margin text-left> 
+              <p no-padding no-margin class="p-title">Billing Details</p> 
+            </ion-col>
+        </ion-row> 
+        
+             
+  <form [formGroup]="validation"> 
+   <ion-list >     
+        <img class="img-user" src="assets/imgs/newimg/group543.png">        
+        <ion-item class="item-pass">         
+           <ion-input type="text" [(ngModel)]="fullname" placeholder="Name" formControlName="fullname"
+           [class.invalid]="!validation.controls.fullname.valid && (validation.controls.fullname.dirty|| submitAttempt)" onkeypress="return /[a-zA-Z ]/i.test(event.key)" ></ion-input>       
+        </ion-item>   
+    <p *ngIf="!validation.controls.fullname.valid && (validation.controls.fullname.dirty|| submitAttempt)" class="errormsg" >*Please enter a name.</p>      
+        <img class="img-pass" src="assets/imgs/newimg/group544.png" [ngStyle]="{'margin-top': !validation.controls.fullname.valid && (validation.controls.fullname.dirty|| submitAttempt) ? '16px' : '29px'}">         
+        <ion-item class="item-pass">      
+           <ion-input type="number" [(ngModel)]="mobno" placeholder="Mobile Number" formControlName="mobno"
+           [class.invalid]="!validation.controls.mobno.valid && (validation.controls.mobno.dirty|| submitAttempt)" #mobid (keypress)="MobCheck(mobid.value)" ></ion-input>      
+        </ion-item> 
+        <p *ngIf="!validation.controls.mobno.valid && (validation.controls.mobno.dirty|| submitAttempt)" class="errormsg">*Please enter a valid mobile number.</p>
+        <img class="img-pass" src="assets/imgs/newimg/group540.png" [ngStyle]="{'margin-top': !validation.controls.mobno.valid && (validation.controls.mobno.dirty|| submitAttempt) ? '17px' : '31px'}"> 
+        <ion-item class="item-pass">     
+           <ion-input type="email" [(ngModel)]="emailid" placeholder="Email ID" formControlName="EmailID"
+           [class.invalid]="!validation.controls.EmailID.valid && (validation.controls.EmailID.dirty|| submitAttempt)"></ion-input>   
+        </ion-item>    
+        <p *ngIf="!validation.controls.EmailID.valid && (validation.controls.EmailID.dirty|| submitAttempt)" class="errormsg">*Please enter a valid email address.</p> 
+</ion-list> 
+</form>
+     
+        <ion-row no-padding no-margin  >
+            <ion-col col-12 no-padding no-margin text-left> 
+              <p no-padding no-margin class="p-title">Your Order</p>   
+            </ion-col>
+        </ion-row>
+
+
+        <ion-row no-padding no-margin class="rows-headersub1">  
+          <ion-col col-6 no-padding no-margin text-left>
+            <p no-padding no-margin  class="p-headsub">Product</p>
+          </ion-col> 
+         
+          <ion-col col-6 no-padding no-margin text-right padding-right>
+            <p no-padding no-margin class="p-headsub" >Price</p>
+          </ion-col> 
+        </ion-row> 
+ 
+        <ion-row no-padding no-margin style="padding-top:8px;">
+            <ion-col col-6 no-padding no-margin text-left>
+              <p no-padding no-margin class="p-headcont" >{{ title }}</p>
+            </ion-col>    
+              
+            <ion-col col-6 no-padding no-margin text-right padding-right >  
+              <p no-padding no-margin class="p-headcont" >{{ price }}</p>
+            </ion-col> 
+        </ion-row>
+
+          <ion-row no-padding no-margin>
+              <ion-col col-12 no-padding no-margin text-right class="cols-total" padding-right>
+                <p no-padding no-margin class="p-paytotal">Total: {{ price }}</p>    
+              </ion-col>
+          </ion-row>
+
+
+        <ion-row no-padding no-margin >   
+            <ion-col col-12 no-padding no-margin text-left> 
+                <button ion-button no-margin no-padding class="btn-img" (click)="navigatetoschooldetails()" [disabled]="!validation.valid" >
+                    <img src="assets/imgs/newimg/group622.png" >  
+                </button>  
+            </ion-col>
+        </ion-row>
+
+        
+
+
+     </ion-grid> 
+
+</ion-content>

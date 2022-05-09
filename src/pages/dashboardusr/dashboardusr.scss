@@ -1,0 +1,205 @@
+page-dashboardusr {
+
+
+    .toolbar-background-md {
+        border-color: map-get($HeaderList, BackgroundC1);    
+        background: map-get($HeaderList, BackgroundC1); 
+    }
+ 
+    .content-md { 
+        color: map-get($ContentColor, DarkSlate); 
+        background-color: map-get($ContentColor,itemBgWhite);         
+    }
+
+    .toolbar-title-md   { 
+        padding: 0 12px;
+        font-size: 14px;
+        color: map-get($HeaderList,ColorWhite);  
+        font-family: $Lato-regular;     
+    }
+   
+    .scroll-content{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .gridcl{
+        padding-left: 24px !important;
+        padding-right: 24px !important;  
+    }
+
+    .item-md {
+        padding-left: 0px;
+    }
+
+    .button-md {  
+        box-shadow:none;
+        -webkit-box-shadow:none;    
+        height: 4.6rem;
+        border-radius: 32px;   
+      }
+
+      .img-menu {
+        width: 25px; 
+        margin-left: 15px;
+      }
+       
+      .img-notify {
+        width: 17px;
+        margin-right: 9px;  
+      }
+
+      .btn-fullbg { 
+        background-image: linear-gradient($content-btn1,$content-btn2);   
+      }
+      .button-outline-md { 
+        width: 99%;
+        margin-top: 10px;
+        border-color: $content-btn3;
+        color: $content-btn3; 
+        font-family: $Lato-heavy;
+      } 
+
+      .btnOptions { 
+        width: 99%;
+        margin-top: 10px;
+        border-color: $content-btn3;
+        color: $content-btnWhite;
+        background: $content-btn3;
+      }
+
+      .chartCl {
+        height: 250px !important;
+        width: 525px !important;  
+        margin-left: -109px;
+        margin-top: -17px;  
+      }
+      .timeleft {
+        position: absolute;
+        margin-top: 163px; 
+        margin-left: 133px;
+        font-size: 22px;  
+        font-family:  $Lato-black;
+      }
+        
+     .p-hourleft  {
+        margin-top: -21px;
+        margin-left: 44px;
+        color: map-get($ContentColor,PColor); 
+        font-family: $Lato-medium;
+      }
+      .p-hourlog {
+        margin-top: -21px;
+        margin-left: 44px;
+        color: map-get($ContentColor,PColor); 
+        font-family: $Lato-medium; 
+      }
+      .div-bglog {
+        width: 29.77px;
+        height: 18.61px;
+        background: map-get($ContentColor,DivBoxGreen); 
+      }
+      .div-bgleft {
+        width: 29.77px;
+        height: 18.61px;
+        background: map-get($ContentColor,DivBoxOrgange);  
+      }
+      .rows-hours {
+        margin-top: 35px;
+        margin-left: 22px;
+      }
+      .rows-plans {
+        margin-top: 21px;
+        } 
+   
+        .p-plans {   
+          color: #a28671; 
+            font-family: $Lato-heavy; 
+            font-size: 12px;
+            margin-top: 25px;  
+        }
+           
+    .rows-btnlog { 
+      margin-top: 40px;
+      margin-bottom: 80px;  
+    }
+
+    .btn-img {      
+      box-shadow:none;background-color: #fff; -webkit-box-shadow:none;
+  }
+
+  .baldiv {
+    display: inline-block;
+    margin-top: 55px;
+    color: #A28671;
+    font-size: 12px;
+    font-family: $Lato-heavy;
+    width: 35%;
+    margin-left: 0px;
+  }
+
+  .totaldiv {
+    display: inline-block;
+    float: right;
+    text-align: end;
+    color: #A28671;
+    font-size: 12px;
+    font-family: $Lato-heavy; 
+    width: 100%;
+    margin-top: -38px;
+  }
+
+  .button-md.activated {
+    background-color: #fff !important;  
+    box-shadow: none;
+    -webkit-box-shadow:none; 
+  }
+ 
+
+  @media only screen and (min-height:615px){       
+    .rows-btnlog {
+        margin-top: 40px;
+        margin-bottom: 29px;
+    }
+    .rows-buttomm {  
+      margin-bottom: 0px !important;   
+ }
+}
+
+@media only screen and (min-height:732px){       
+  .rows-btnlog {
+      margin-top: 40px;
+      margin-bottom: 29px;
+  }
+  .rows-buttomm {    
+    margin-bottom: 16px !important;   
+}
+ 
+}
+
+@media only screen and (min-height:715px){     
+  .rows-btnlog {
+    margin-top: 40px;
+    margin-bottom: 69px;
+  }
+  
+  .rows-buttomm  { 
+    margin-bottom: 40px !important;
+  }  
+
+  .totaldiv {
+    display: inline-block;
+    float: right;
+    text-align: end;
+    color: #A28671;
+    font-size: 12px;
+    font-family: "Lato-Heavy";
+    width: 100%;
+    margin-top: -25px;
+    padding-right: 3px;
+}
+ 
+}
+ 
+
+}

@@ -1,0 +1,91 @@
+page-wlchourpop {
+    .div-main{ 
+        width: 98%;
+        border-radius: 6px;
+        margin: auto;
+        margin-top: 115%;
+    }
+
+    .content-md{   
+        background-color: rgba(0,0,0,0.4);
+    }
+    .content-ios{    
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .button-md {
+        background-color: #FFFFFF;
+        color: #00408A;
+        font-size: 17px;
+        font-family: "Lato-Black";  
+        box-shadow: none !important;  
+        -webkit-box-shadow: none !important; 
+    }
+    .button-ios {  
+       background-color: #FFFFFF;
+       color: #00408A; 
+       font-size: 17px;
+       font-family: "Lato-Black";
+       box-shadow: none !important;
+       -webkit-box-shadow: none !important;  
+    }
+
+    .rowbtn {  
+    margin: auto;
+    border: 1px solid #FFFFFF;
+    min-height: 6rem;
+    border-radius: 25px;
+    margin-left: 1px;  
+    }
+
+    .p-text {
+       color: #363636;
+       text-align: left;
+       font-size:15px;  
+       font-family:"Lato-Regular";    
+    }
+    .divinner1 {
+        width: 25%;
+        float: left;
+        text-align: right;
+    }
+    .divinner2 {
+    width: 45%;
+    float: left;
+    }
+    .divinner3 {
+    color: #fff;
+    width: 100%; 
+    font-size: 18px;
+    margin-top: -18px;  
+    font-family: $Lucida-Handwriting-Italic; 
+    }
+
+    .rowstop {
+        padding-top: 27.6%; 
+    }
+     
+    @media only screen and (min-height:732px) {     
+          .rowstop {
+            padding-top: 27.6%;
+        }    
+          .div-main {
+            width: 98%;
+            border-radius: 6px;
+            margin: auto;
+            margin-top: 106%;  
+        }
+    }
+
+    
+    @media only screen and (min-height:715px) { 
+        .div-main {
+            width: 98% !important;   
+            border-radius: 6px;
+            margin: auto;
+            margin-top: 107%;
+        }
+    }   
+
+
+}

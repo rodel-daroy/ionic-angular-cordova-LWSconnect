@@ -1,0 +1,74 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+.md .menu-inner {
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+.loading-md .loading-wrapper {
+    border-radius: 2px;
+    max-width: 280px;
+    max-height: 90%;
+    color: rgba(0, 0, 0, 0.5);  
+    background: none !important; 
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; 
+    padding: 24px !important;
+}
+
+
+.select-md .select-icon {
+    position: relative;
+    margin-right: 32px;
+    margin-top: -9px;
+    width: 12px !important;
+    height: 16px !important; 
+}
+
+.select-md .select-icon .select-icon-inner {
+    background-image: url(../assets/imgs/newimg/arrow-down15.png);
+    width: 17px !important;
+    height: 10px !important;  
+    left: 33px;
+    top: 56%;
+    margin-top: 3px !important;
+    position: absolute;
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    color: #999;
+    pointer-events: none;
+} 
+.item-cover {
+  width: 90%;
+margin-left: 6%;
+border-bottom: 1px solid #707070;
+}
+
+.txtright {
+    font-family: $Lato-regular;
+    font-size: 13px;  
+} 
+
+.menu-inner {
+    width: 221px !important;  
+}  
+
+.popover-md .popover-content {
+    left: 80px !important; 
+} 

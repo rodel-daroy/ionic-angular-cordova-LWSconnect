@@ -1,0 +1,81 @@
+<!--
+  Generated template for the AddlogPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+ 
+<ion-header no-shadow no-border>
+  <ion-navbar > 
+    <ion-title text-center>LOG HOURS</ion-title>     
+  </ion-navbar>
+</ion-header>
+
+<ion-content > 
+
+  
+  <ion-grid class="gridcl">
+     
+      <ion-list margin-top>
+
+          <img class="img-user" src="assets/imgs/newimg/group554.png">   
+          <ion-item>    
+            <ion-label floating *ngIf="onTask" [ngStyle]="(onTask)?{'display':'none'}:{ }">Select Task</ion-label> 
+            <ion-label *ngIf="!onTask">Select Task</ion-label>  
+             <ion-select [(ngModel)]="TaskSelect" interface="popover" [ngStyle]="(onTask)?{'margin-top':'6px','margin-left':'10px'}:{}" #C (ionChange)="onChangeTask()">   
+               <ion-option value="IPU">IPU</ion-option>
+               <ion-option value="ILR">ILR</ion-option>  
+             </ion-select>
+          </ion-item>
+
+
+        <img class="img-pass" src="assets/imgs/newimg/group555.png">    
+        <ion-item class="item-pass">    
+           <ion-input type="text" [(ngModel)]="username" placeholder="Date"></ion-input>  
+        </ion-item>    
+        
+        
+        <img class="img-pass" src="assets/imgs/newimg/group582.png">  
+        <ion-item class="item-pass">  
+           <ion-input type="password" [(ngModel)]="password" placeholder="Hours Spent"></ion-input> 
+        </ion-item>
+
+        
+  
+        <div class="MainDiv">
+            <div class="imagesec">
+                <img class="imgagesrc-img" src="assets/imgs/newimg/group546.png">   
+            </div>
+            <div class="textsec"> 
+                <p no-padding no-margin style="margin-left: 17%;margin-top: 13px;">Enter Details</p>
+            </div>  
+        </div>    
+
+        <div class="MainDiv1"> 
+
+          <div style="padding-top: 35px;"> 
+              <ion-item class="item-txtarea"> 
+                  <ion-textarea rows="5" placeholder="Please describe your task details here."></ion-textarea>
+              </ion-item> 
+              <img class="icon-imgtxtarea" src="assets/imgs/newimg/group553_18px.png">      
+          </div>
+
+
+        </div>   
+
+       
+      </ion-list> 
+
+      <ion-row no-margin no-padding margin-bottom>   
+        <ion-col col-12 no-margin no-padding>    
+           <button ion-button full (click)="GotoNext()">SUBMIT</button> 
+        </ion-col>
+      </ion-row>
+       
+  </ion-grid>
+
+
+    
+</ion-content>
+    

@@ -1,0 +1,190 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  whitecolor:	#ffffff
+);
+
+
+$ContentColor: (         
+	DarkSlate:#464646,
+	bgcolor:#F6FAFD ,
+	PColor: #464646,
+	DivBoxOrgange  :#FF6182, 
+	DivBoxGreen : #4BF3F3,
+	itemleftborder: #008ED8,
+	BorderColor: #AAAAAA,
+	itemColor: #46476A,
+	itemBgWhite: #fff,
+	PColor1 :#60647D,
+	pColor2:  #333333 ,
+	PDesc:#858585,   
+ 
+	PColorc: #527DA3, 
+
+	pchathead: #ADADAD,
+
+	atitle:#A28671
+);
+
+$ContentBg: (    
+	DarkSlate:#464646 
+);
+
+
+$HeaderList: (  
+	// BorderColor: #333333,
+	// BackgroundC:#020202, 
+ 
+	BorderColor: #A28671, 
+	BackgroundC:#A28671, 
+	BackgroundC1:#A28671, 
+
+	ColorWhite:#FFF
+);
+
+
+// for content  button  color gradiant ..   
+ 
+$content-btn1:#00408A;
+$content-btn2:#0060D3;  
+$content-btnWhite:#fff;  
+$content-btn3:#A28671;
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+
+@font-face {
+	font-family: Lato;
+	src: url("../assets/fonts/Latofonts/Lato-Regular.ttf");
+}
+
+@font-face {
+	font-family: Lato-Black;
+	src: url("../assets/fonts/Latofonts/Lato-Black.ttf");
+}
+
+@font-face {
+	font-family: Lucida-Handwriting-Italic;
+	src: url("../assets/fonts/Lucida-Handwriting-Italic.ttf"); 
+}
+
+@font-face {
+	font-family: Lato-Bold;
+	src: url("../assets/fonts/Latofonts/Lato-Bold.ttf");
+}
+
+@font-face {
+	font-family: Lato-SemiBold;
+	src: url("../assets/fonts/Latofonts/Lato-Semibold.ttf");
+}
+
+@font-face {
+	font-family: Lato-Heavy;
+	src: url("../assets/fonts/Latofonts/Lato-Heavy.ttf");
+}
+
+@font-face {
+	font-family: Lato-Medium;
+	src: url("../assets/fonts/Latofonts/Lato-Medium.ttf");
+}
+
+@font-face {
+	font-family: Lato-Regular;
+	src: url("../assets/fonts/Latofonts/Lato-Regular.ttf");
+}
+
+@font-face {
+	font-family: Lato-Bold;
+	src: url("../assets/fonts/Latofonts/Lato-Bold.ttf");
+}
+
+
+$Lato-bold:"Lato-Bold";
+$Lato-regular: "Lato-Regular"; 
+$Lato-medium: "Lato-Medium"; 
+$Lato-heavy: "Lato-Heavy";
+$Lato-semiBold: "Lato-SemiBold";  
+$Lato-bold: "Lato-Bold";  
+$Lato-black: "Lato-Black"; 
+$Lato: "Lato"; 
+
+$Lucida-Handwriting-Italic: "Lucida-Handwriting-Italic"; 
+ 
+   
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+$font-family-ios-base: "Lato", "Lato-Bold","Lato-SemiBold", "Helvetica Neue", "Roboto", sans-serif;
+$font-family-md-base: "Lato", "Roboto", "Helvetica Neue", "Lato-Bold","Lato-SemiBold";
+$font-family-wp-base: "Lato",  "Segoe UI", "Noto Sans", "Lato-Bold","Lato-SemiBold";

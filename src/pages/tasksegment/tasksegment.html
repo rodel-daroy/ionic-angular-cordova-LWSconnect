@@ -1,0 +1,156 @@
+<!--
+  Generated template for the TasksegmentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header no-shadow no-border> 
+  <ion-navbar > 
+        <ion-buttons left> 
+                <button ion-button icon-only (click)="NotifyBtn()">       
+                  <!-- <img  class="img-notify" src="assets/imgs/newimg/notification.png"> -->
+                  <ion-icon name="md-arrow-back"></ion-icon> 
+                </button>
+        </ion-buttons>        
+    <ion-title text-center>TASKS</ion-title>             
+  </ion-navbar>
+</ion-header> 
+       
+<ion-content>    
+      
+    <ion-segment [(ngModel)]="chooseOptions" (ionChange)="segmentChanged($event)">
+        <ion-segment-button class="segmentbtn" value="gotask">
+           <p class="text-header">ON GOING TASKS</p> 
+        </ion-segment-button>
+        <ion-segment-button value="completetask" class="segmentbtn">
+           <p class="text-header">COMPLETED TASKS</p>
+        </ion-segment-button>   
+    </ion-segment> 
+
+  <ion-grid class="gridcl">  
+         
+<div *ngIf="chooseOptions=='gotask'">  
+  
+  <div *ngFor="let itemgo of taskongoing;let i =index;let odd=odd; let even=even;"> 
+      
+    
+
+    <ion-row no-padding no-margin class="rows-outer" margin-top (click)="NextNav(itemgo.PostID,itemgo.PostTitle,itemgo.status)" *ngIf="odd"   style="border-top: 5px solid #FC5F45 !important;">                       
+        <ion-col col-8 no-padding no-margin margin-bottom  *ngIf="itemgo.reviewStatus == 'closed'">         
+          <p no-padding no-margin class="p-top">Task Name: {{ itemgo.PostTitle }}</p>
+          <p no-padding no-margin class="p-middle">Hours Spent: {{ itemgo.comment_hour }}</p> 
+        </ion-col>
+        <ion-col col-4 no-padding no-margin margin-bottom  *ngIf="itemgo.reviewStatus == 'closed'">       
+            <div class="divtxtimg" >    
+                <div class="divtxt">
+                    <p no-padding no-margin class="p-divtxt">For review</p>
+                </div>
+                <div class="divimg">   
+                    <img src="assets/imgs/newimg/arrow-down15.png">  
+                </div>
+            </div>  
+            <!-- <ion-item >     
+                <ion-label floating *ngIf="onTaskPower" [ngStyle]="(onTaskPower)?{'display':'none'}:{  }">For review</ion-label>      
+                <ion-label *ngIf="!onTaskPower" style="font-size: 14px">For review</ion-label>     
+                 <ion-select [(ngModel)]="statuswp" interface="popover" [ngStyle]="(onTaskPower)?{'margin-top':'6px','margin-left':'10px'}:{}" #C (ionChange)="onChangeTaskPower()">   
+                   <ion-option value="open" >Open</ion-option> 
+                   <ion-option value="close">Close</ion-option>   
+                 </ion-select>
+              </ion-item> -->
+        </ion-col>
+  
+
+   <ion-col col-12 no-padding no-margin margin-bottom *ngIf="itemgo.reviewStatus != 'closed'">     
+            <p no-padding no-margin class="p-top">Task Name:  {{ itemgo.PostTitle }}</p>
+            <p no-padding no-margin class="p-middle">Hours Spent: {{ itemgo.comment_hour }}</p>   
+          </ion-col> 
+      </ion-row>
+   
+
+
+      <ion-row no-padding no-margin class="rows-outer" margin-top (click)="NextNav(itemgo.PostID,itemgo.PostTitle,itemgo.status)" *ngIf="even" style="border-top: 5px solid #AE29E6 !important;" >                          
+          <ion-col col-8 no-padding no-margin margin-bottom *ngIf="itemgo.reviewStatus == 'closed'">       
+            <p no-padding no-margin class="p-top">Task Name: {{ itemgo.PostTitle }}</p>
+            <p no-padding no-margin class="p-middle">Hours Spent: {{ itemgo.comment_hour }}</p> 
+          </ion-col>
+          <ion-col col-4 no-padding no-margin margin-bottom  *ngIf="itemgo.reviewStatus == 'closed'">  
+             
+              <div class="divtxtimg" >
+                  <div class="divtxt"> 
+                      <p no-padding no-margin class="p-divtxt">For review</p>
+                  </div>
+                  <div class="divimg">   
+                      <img src="assets/imgs/newimg/arrow-down15.png">  
+                  </div>
+              </div>  
+
+              <!-- <ion-item >     
+                  <ion-label floating *ngIf="onTaskPower" [ngStyle]="(onTaskPower)?{'display':'none'}:{      }">For review</ion-label>      
+                  <ion-label *ngIf="!onTaskPower" style="font-size: 14px">For review</ion-label>     
+                   <ion-select [(ngModel)]="statuswp" interface="popover" [ngStyle]="(onTaskPower)?{'margin-top':'6px','margin-left':'10px'}:{}" #C (ionChange)="onChangeTaskPower()">   
+                     <ion-option value="open" >Open</ion-option> 
+                     <ion-option value="close">Close</ion-option>   
+                   </ion-select>
+                </ion-item> -->
+          </ion-col>
+          <ion-col col-12 no-padding no-margin margin-bottom *ngIf="itemgo.reviewStatus != 'closed'">     
+              <p no-padding no-margin class="p-top">Task Name:  {{ itemgo.PostTitle }}</p>
+              <p no-padding no-margin class="p-middle">Hours Spent: {{ itemgo.comment_hour }}</p>   
+            </ion-col>
+        </ion-row>
+
+
+
+    </div>
+
+</div>
+
+<div *ngIf="chooseOptions=='completetask'"> 
+
+  <div *ngFor="let itemcom of taskcomp; let i=index;let odd=odd; let even=even;">        
+    <ion-row no-padding no-margin class="rows-outer" (click)="NextNav(itemcom.PostID,itemcom.PostTitle,itemcom.reviewStatus)" margin-top *ngIf="odd" style="border-top: 5px solid #FC5F45 !important;" >  
+        <ion-col col-12 no-padding no-margin margin-bottom>     
+            <p no-padding no-margin class="p-top">Task Name: {{ itemcom.PostTitle }}</p>  
+             <p no-padding no-margin class="p-middle">Hours Spent: {{ itemcom.comment_hour }}</p>     
+          </ion-col>
+      </ion-row>
+    <ion-row no-padding no-margin class="rows-outer" (click)="NextNav(itemcom.PostID,itemcom.PostTitle,itemcom.reviewStatus)" margin-top *ngIf="even" style="border-top: 5px solid #AE29E6 !important;" >  
+        <ion-col col-12 no-padding no-margin margin-bottom>     
+            <p no-padding no-margin class="p-top">Task Name: {{ itemcom.PostTitle }}</p>        
+             <p no-padding no-margin class="p-middle">Hours Spent: {{ itemcom.comment_hour }}</p>   
+          </ion-col>
+      </ion-row>
+    </div>   
+  <!-- <ion-row no-padding no-margin class="rows-outer" margin-top style="border-top: 5px solid #FC5F45;">  
+        <ion-col col-12 no-padding no-margin margin-bottom>     
+          <p no-padding no-margin class="p-top">Task Name: Design Banners</p>
+          <p no-padding no-margin class="p-middle">Hours Spent: 02:00 hrs</p>
+        </ion-col>
+    </ion-row>
+      <ion-row no-padding no-margin class="rows-outer" margin-top style="border-top: 5px solid #AE29E6;">  
+          <ion-col col-12 no-padding no-margin margin-bottom>     
+            <p no-padding no-margin class="p-top">Task Name: Design Banners</p>
+            <p no-padding no-margin class="p-middle">Hours Spent: 02:00 hrs</p>
+          </ion-col>
+      </ion-row> -->
+</div>   
+       
+  
+  </ion-grid>
+  
+
+</ion-content>
+  
+<ion-footer no-padding no-margin no-shadow no-border style="background: #fff;">     
+    <ion-row no-margin no-padding style="width: 85%;background: #fff; margin: 0px auto;margin-bottom: 33px;">        
+        <ion-col col-7 no-margin no-padding>      
+            <button ion-button outline (click)="GotoNext()" class="btnOptions" style="width: 95%;"> CREATE A TASK</button>     
+         </ion-col>  
+                
+        <ion-col col-5 no-margin no-padding>       
+           <button ion-button outline (click)="UpgradeBtn()" class="btnOptions">OPTIONS</button>       
+        </ion-col>
+      </ion-row>  
+</ion-footer> 
+

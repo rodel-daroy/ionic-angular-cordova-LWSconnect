@@ -1,0 +1,109 @@
+page-upgradeplan {
+    .toolbar-background-md {
+        border-color: map-get($HeaderList, BackgroundC); 
+        background: map-get($HeaderList, BackgroundC); 
+    }
+    .content-md { 
+        color: map-get($ContentColor, DarkSlate); 
+        background-color: map-get($ContentColor,bgcolor);   
+        //background-image: url('../assets/imgs/newimg/books-outline1.png');        
+    }
+
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #fff;
+        background-color: transparent;
+    }
+ 
+    .toolbar-title-md   {
+        padding: 0 12px;
+        font-size: 14px; 
+        font-weight: bold;
+        color: map-get($ContentColor, itemBgWhite);
+        margin-right: 67px; 
+    }
+   
+    .scroll-content{  
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .gridcl{
+        padding-left: 24px !important;
+        padding-right: 24px !important;  
+    }
+
+    .rows-header{
+        margin-top: 42px;
+    }
+    .p-title {
+        font-size: 19px;
+        color: map-get($ContentColor, PColor);
+        font-family: $Lato-heavy;
+    }
+
+    .p-desc {
+        font-size: 11px;  
+        color :#ADADAD;
+        font-family: $Lato-medium;
+    }
+  
+
+
+
+
+.slide_box  { 
+    width: 100%;
+justify-content:center;
+display:flex; 
+align-items:center;  
+}
+.slide-div  {
+height: 40%;
+width: 100%;
+} 
+.slider-style   {
+   width: 100%;  
+   display: inline-block;
+}
+
+.slide-style {
+    width:300px !important;    
+}
+
+.p-title1{
+    font-size: 24px;
+    color: map-get($ContentColor, PColor);
+    font-family: $Lato-heavy;
+}
+.p-desc1 {
+    font-size: 12px;
+    color: map-get($ContentColor, PColor);
+    font-family: $Lato-medium; 
+    margin-top: 3px;
+}
+.p-title2{
+    font-size: 54px;
+    color: map-get($ContentColor, PColor1);
+    font-family: $Lato-heavy;  
+}
+.p-title3 {
+    font-size: 15px;  
+    color: map-get($ContentColor, PColor);
+    font-family: $Lato-medium;  
+}
+
+.btn-play {
+    box-shadow:none;
+    -webkit-box-shadow:none;
+    border-radius: 17px !important;
+    width: 60%;  
+    font-family: $Lato-medium;  
+    font-size: 16px; 
+    background-image: linear-gradient($content-btn1,$content-btn2);  
+    height: 6rem; 
+}
+ion-slides {
+    margin-top: 81px;
+}
+
+}

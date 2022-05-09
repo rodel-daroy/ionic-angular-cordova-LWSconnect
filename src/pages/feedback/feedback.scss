@@ -1,0 +1,235 @@
+page-feedback {
+    .div-main   {
+        width: 95%;    
+        border-radius:6px;
+        margin: auto;
+        background-color: #FFFFFF;
+        margin-top: 69%;    
+        box-shadow: 0 0 0 -5px white, 0 3px 20px black;   
+    }  
+    .content-md    {     
+        background-color: rgba(0,0,0,0.7);
+    }
+    .content-ios   {    
+        background-color: rgba(0,0,0,0.7);
+    }
+    .button-md     {
+        background-color: #FFFFFF;
+        color: $content-btn3;
+        font-size: 14px;
+        font-family: $Lato-black;  
+        box-shadow: none !important;  
+        -webkit-box-shadow: none !important; 
+    }
+    .button-ios    {
+       background-color: #FFFFFF;
+       color: $content-btn3;   
+       font-size: 14px;
+       font-family: $Lato-black;  
+       box-shadow: none !important;
+       -webkit-box-shadow: none !important;  
+    }
+    .row   {  
+    width: 85%;
+    margin: auto;
+    }
+    .outerrow  {
+       padding-bottom: 7px; 
+    }
+   
+    .p-text     {
+       color: #464646;
+       text-align: left;
+       font-size:14px;  
+       font-family:$Lato-bold;     
+    }
+    .p-text1   { 
+       color: #707070;
+       text-align: left;
+       font-size:13px;  
+       font-family:$Lato-regular;    
+    } 
+
+    .imgrate {
+       width: 10%;  
+    }
+
+    .rowimg {
+        margin-top: 7px; 
+        text-align: left;
+    }
+
+    .fbhead {
+        padding-top: 21px; 
+    }
+
+    .item-txtarea {
+        border-radius: 8px !important;
+        border: none;
+        padding-left: 0px !important;
+        color: #9B9B9B !important;
+        background-color: #fff;
+        font-size: 14px !important;
+        border: 1px solid #d8d8d8 !important;
+        width: 88%;
+        margin-left: 17px;
+        margin-top: 15px;
+        margin-bottom: 11px;
+    } 
+      
+
+    textarea::-webkit-input-placeholder {
+        color: #9B9B9B !important; 
+        text-indent: 7px;
+        }
+         
+        textarea:-moz-placeholder { /* Firefox 18- */
+            color: #9B9B9B !important; 
+        text-indent: 7px;
+        }
+         
+        textarea::-moz-placeholder {  /* Firefox 19+ */
+            color: #9B9B9B !important;
+        text-indent: 7px;
+        }
+          
+        textarea:-ms-input-placeholder {  
+            color: #9B9B9B !important; 
+        text-indent: 7px; 
+        }
+
+        textarea.text-input {
+            display: block;
+            margin-top: 7.33px;
+            margin-left: 10px;
+        }
+
+        .text-input  {
+            width: 92% !important;
+        }
+
+        .text-input::-moz-placeholder {
+            color: #9B9B9B !important;
+          }
+          
+          .text-input:-ms-input-placeholder {
+            color: #9B9B9B !important;   
+          }
+          
+          .text-input::-webkit-input-placeholder {
+            text-indent: 0;
+            color: #9B9B9B !important;
+          }
+
+          .text-input-md {
+            margin: 0px !important;   
+            margin-left: 10px !important; 
+            margin-top: 7.33px !important;   
+          }
+
+          .errormsg  { 
+            color: #595a79;
+            font-size: 14px;
+            margin-top: 5px; 
+        }
+        .errormsg1 {
+            color: #595a79;
+            font-size: 14px;
+            text-align: left;
+            margin-left: 17px;  
+        }
+
+        
+    .errmsgcl {
+        font-size: 14px;
+        font-family: "Lato-Bold","Lato-Heavy"; 
+    }  
+           
+
+
+    .text-input::-moz-placeholder {
+        color: #d8d8d8 !important;    
+      }
+      
+      .text-input:-ms-input-placeholder {
+        color: #d8d8d8 !important;   
+      }
+      
+      .text-input::-webkit-input-placeholder {
+        text-indent: 0;
+        color: #d8d8d8 !important;   
+      }
+
+
+      textarea::-webkit-input-placeholder {
+        color: #464646 !important;  
+        text-indent: 10px;
+        }
+         
+        textarea:-moz-placeholder { /* Firefox 18- */
+        color: #464646 !important;  
+        text-indent: 10px;
+        }
+         
+        textarea::-moz-placeholder {  /* Firefox 19+ */
+        color: #464646 !important;  
+        text-indent: 10px;
+        }  
+          
+        textarea:-ms-input-placeholder {  
+        color: #464646 !important;   
+        text-indent: 10px;  
+        }
+
+        textarea.text-input {
+            display: block;
+            margin-top: 10px;
+            margin-left: 22px;
+        }
+
+        .item-md.item-input.input-has-focus .item-inner {
+            box-shadow: none !important;
+            color: #464646 !important; 
+          }
+          
+          .list-md .item-input.input-has-focus:last-child {
+            box-shadow: none !important;
+            color: #464646 !important;
+          }
+          
+          .list-md .item-input.input-has-focus:last-child .item-inner {
+            box-shadow: none;
+            color: #464646 !important;
+          }
+          
+          .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+            box-shadow: none !important;
+            color: #464646 !important;
+          }
+          
+          .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+            box-shadow: none !important;
+            color: #464646 !important;
+          }
+          
+          .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner {
+            box-shadow: none;
+            color: #464646 !important;
+          }
+          
+          .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+            box-shadow: none !important;
+            color: #464646 !important;
+          }
+          
+          .list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {  
+            box-shadow: none !important;
+            color: #464646 !important;
+          }
+          .item-md.item-block .item-inner {
+            border-bottom: none !important;
+         
+        }
+
+    
+}
